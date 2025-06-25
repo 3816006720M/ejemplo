@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre del Negocio - Tu Solución de Confianza</title>
+    <!-- Incluye Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de la fuente Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f6; /* Un gris claro suave */
+        }
+        /* Estilo para el efecto de onda en el botón */
+        .btn-wave {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .btn-wave::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease-out, height 0.4s ease-out;
+            z-index: -1;
+        }
+        .btn-wave:hover::before {
+            width: 300%;
+            height: 300%;
+        }
+        /* Estilos para el scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header (Encabezado) -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-4 shadow-lg fixed w-full z-50 rounded-b-lg">
+        <nav class="container mx-auto flex justify-between items-center px-4">
+            <a href="#" class="text-3xl font-bold rounded-lg p-2 hover:bg-blue-700 transition-colors">
+                <span class="text-yellow-300">Negocio</span>Pro
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#inicio" class="hover:text-yellow-300 transition-colors font-medium text-lg px-3 py-2 rounded-md">Inicio</a>
+                <a href="#nosotros" class="hover:text-yellow-300 transition-colors font-medium text-lg px-3 py-2 rounded-md">Nosotros</a>
+                <a href="#servicios" class="hover:text-yellow-300 transition-colors font-medium text-lg px-3 py-2 rounded-md">Servicios</a>
+                <a href="#testimonios" class="hover:text-yellow-300 transition-colors font-medium text-lg px-3 py-2 rounded-md">Testimonios</a>
+                <a href="#contacto" class="hover:text-yellow-300 transition-colors font-medium text-lg px-3 py-2 rounded-md">Contacto</a>
+            </div>
+            <!-- Botón de menú para móviles -->
+            <div class="md:hidden">
+                <button id="menu-button" class="text-white focus:outline-none p-2 rounded-md hover:bg-blue-700 transition-colors">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Menú móvil (oculto por defecto) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-600 rounded-b-lg py-2 mt-2 shadow-md">
+            <a href="#inicio" class="block px-4 py-2 text-lg hover:bg-blue-700 rounded-md transition-colors">Inicio</a>
+            <a href="#nosotros" class="block px-4 py-2 text-lg hover:bg-blue-700 rounded-md transition-colors">Nosotros</a>
+            <a href="#servicios" class="block px-4 py-2 text-lg hover:bg-blue-700 rounded-md transition-colors">Servicios</a>
+            <a href="#testimonios" class="block px-4 py-2 text-lg hover:bg-blue-700 rounded-md transition-colors">Testimonios</a>
+            <a href="#contacto" class="block px-4 py-2 text-lg hover:bg-blue-700 rounded-md transition-colors">Contacto</a>
+        </div>
+    </header>
+
+    <!-- Hero Section (Sección Principal) -->
+    <section id="inicio" class="relative bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-32 md:py-48 flex items-center justify-center min-h-screen-75 rounded-b-3xl shadow-xl">
+        <div class="container mx-auto text-center px-4 z-10">
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-down">
+                Potenciamos tu Negocio con Soluciones Innovadoras
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90 animate-fade-in-up">
+                Ofrecemos servicios de calidad superior para impulsar tu crecimiento y alcanzar tus metas.
+            </p>
+            <a href="#contacto" class="inline-block bg-yellow-400 text-blue-900 font-bold py-4 px-10 rounded-full text-xl hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 shadow-lg btn-wave">
+                ¡Contáctanos Hoy!
+            </a>
+        </div>
+        <!-- Efecto de fondo sutil -->
+        <div class="absolute inset-0 bg-pattern opacity-10" style="background-image: url('https://placehold.co/1920x1080/000000/FFFFFF?text=Pattern'); background-size: cover; background-blend-mode: overlay;"></div>
+    </section>
+
+    <!-- About Us Section (Nosotros) -->
+    <section id="nosotros" class="py-16 md:py-24 bg-white rounded-3xl mx-4 my-8 shadow-lg">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <img src="https://placehold.co/600x400/60A5FA/FFFFFF?text=Equipo+Profesional" alt="Equipo Profesional" class="rounded-2xl shadow-xl transform hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">¿Quiénes Somos?</h2>
+                <p class="text-lg leading-relaxed text-gray-700 mb-6">
+                    Somos un equipo apasionado de profesionales dedicados a ofrecer soluciones innovadoras y personalizadas para cada uno de nuestros clientes. Con años de experiencia en el sector, nos enorgullece construir relaciones duraderas basadas en la confianza y la excelencia.
+                </p>
+                <p class="text-lg leading-relaxed text-gray-700">
+                    Nuestra misión es entender tus necesidades y superar tus expectativas, proporcionando resultados medibles que impulsen tu éxito. Creemos en la transparencia, la integridad y el compromiso total con cada proyecto.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (Servicios) -->
+    <section id="servicios" class="py-16 md:py-24 bg-gray-100 rounded-3xl mx-4 my-8 shadow-lg">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-12">Nuestros Servicios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Tarjeta de Servicio 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md transform hover:scale-105 transition-transform duration-300 border-b-4 border-blue-500">
+                    <div class="text-blue-500 mb-4">
+                        <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1.25-3M15 10V5.21c-1.24-.52-2.51-.8-3.8-.8C7.5 4.41 3 9.4 3 15v4h18v-4c0-5.6-4.5-10.59-9.2-10.79"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Consultoría Estratégica</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Análisis profundo de tu negocio para identificar oportunidades y desarrollar planes de acción efectivos.
+                    </p>
+                </div>
+                <!-- Tarjeta de Servicio 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md transform hover:scale-105 transition-transform duration-300 border-b-4 border-yellow-500">
+                    <div class="text-yellow-500 mb-4">
+                        <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.666 0-2.666 1.334-2.666 3s1 3 2.666 3 2.666-1.334 2.666-3-1-3-2.666-3zM12 21a9 9 0 100-18 9 9 0 000 18z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Desarrollo de Software</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Creación de soluciones de software a medida, desde aplicaciones móviles hasta sistemas empresariales.
+                    </p>
+                </div>
+                <!-- Tarjeta de Servicio 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md transform hover:scale-105 transition-transform duration-300 border-b-4 border-green-500">
+                    <div class="text-green-500 mb-4">
+                        <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Marketing Digital</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Estrategias de marketing online para aumentar tu visibilidad, atraer clientes y generar leads.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Testimonios) -->
+    <section id="testimonios" class="py-16 md:py-24 bg-blue-500 text-white rounded-3xl mx-4 my-8 shadow-lg">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12">Lo que Nuestros Clientes Dicen</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Testimonio 1 -->
+                <div class="bg-blue-600 p-8 rounded-2xl shadow-md hover:bg-blue-700 transition-colors duration-300">
+                    <p class="text-xl italic mb-6">
+                        "El equipo de NegocioPro superó nuestras expectativas. Su compromiso y profesionalismo son inigualables."
+                    </p>
+                    <p class="font-semibold text-lg">- María G., CEO de InnovaTech</p>
+                </div>
+                <!-- Testimonio 2 -->
+                <div class="bg-blue-600 p-8 rounded-2xl shadow-md hover:bg-blue-700 transition-colors duration-300">
+                    <p class="text-xl italic mb-6">
+                        "Gracias a sus estrategias, hemos visto un crecimiento significativo en nuestras ventas. ¡Altamente recomendados!"
+                    </p>
+                    <p class="font-semibold text-lg">- Juan P., Director de Ventas de GlobalCorp</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (Contacto) -->
+    <section id="contacto" class="py-16 md:py-24 bg-white rounded-3xl mx-4 my-8 shadow-lg">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-12">Contáctanos</h2>
+            <p class="text-lg leading-relaxed text-gray-700 mb-8 max-w-2xl mx-auto">
+                ¿Listo para llevar tu negocio al siguiente nivel? Completa el formulario a continuación o utiliza nuestros datos de contacto para comunicarte.
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-center items-start gap-12">
+                <!-- Formulario de Contacto -->
+                <div class="md:w-1/2 bg-gray-50 p-8 rounded-2xl shadow-md border border-gray-200">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="nombre" class="block text-left text-gray-800 text-lg font-medium mb-2">Nombre Completo</label>
+                            <input type="text" id="nombre" name="nombre" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900" placeholder="Tu nombre" required>
+                        </div>
+                        <div>
+                            <label for="email_contact" class="block text-left text-gray-800 text-lg font-medium mb-2">Correo Electrónico</label>
+                            <input type="email" id="email_contact" name="email_contact" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900" placeholder="tu.email@ejemplo.com" required>
+                        </div>
+                        <div>
+                            <label for="mensaje" class="block text-left text-gray-800 text-lg font-medium mb-2">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="6" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 px-8 rounded-full text-xl hover:bg-blue-700 transition-colors duration-300 shadow-md btn-wave">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Información de Contacto Adicional -->
+                <div class="md:w-1/2 bg-gray-50 p-8 rounded-2xl shadow-md border border-gray-200">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Nuestra Información</h3>
+                    <div class="space-y-6 text-left">
+                        <p class="flex items-center text-lg text-gray-700">
+                            <svg class="w-6 h-6 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7s-8-3.134-8-7 3.582-7 8-7 8 3.134 8 7zM9 9a1 1 0 100 2h2a1 1 0 100-2H9zm-3 2a1 1 0 100-2h.01a1 1 0 100 2H6zm8 0a1 1 0 100-2h.01a1 1 0 100 2H14z" clip-rule="evenodd"></path></svg>
+                            Dirección: Calle Falsa 123, Ciudad, País
+                        </p>
+                        <p class="flex items-center text-lg text-gray-700">
+                            <svg class="w-6 h-6 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.774a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                            Teléfono: +123 456 7890
+                        </p>
+                        <p class="flex items-center text-lg text-gray-700">
+                            <svg class="w-6 h-6 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                            Email: info@negociopro.com
+                        </p>
+                        <p class="flex items-center text-lg text-gray-700">
+                            <svg class="w-6 h-6 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z" clip-rule="evenodd"></path></svg>
+                            Horario: Lunes a Viernes, 9:00 AM - 6:00 PM
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Pie de Página) -->
+    <footer class="bg-gray-900 text-white py-10 rounded-t-lg shadow-lg">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-2xl font-bold">Negocio<span class="text-yellow-400">Pro</span></p>
+                    <p class="text-sm mt-2">&copy; 2023 Todos los derechos reservados.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.707 9.293a1 1 0 00-1.414 0L12 13.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 000-1.414z"></path></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.707 9.293a1 1 0 00-1.414 0L12 13.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 000-1.414z"></path></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.707 9.293a1 1 0 00-1.414 0L12 13.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 000-1.414z"></path></svg>
+                    </a>
+                </div>
+            </div>
+            <p class="text-sm text-gray-500">Diseñado con <span class="text-red-500">&hearts;</span> para NegocioPro</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Toggle mobile menu visibility
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
